@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block css_files %} 
+
+    <link rel="stylesheet" href="{% static 'blog/css/style.css'%}">
+
+{% endblock %}
+
+
+
+{% block title %} Citypage {% endblock %}
+
+{% block content %}
+
+       
+       
+    <div class="container mt-3">
+        
+
+                                
+        <div class="col-9">
+            <h1><h3>Popüler Şehirler</h3></h1>
+            <hr>
+
+            {% for blog_city in blogs_city %}
+
+                
+                {% include 'blog/partials/_blog2.html' %}
+                
+
+            {% endfor %}               
+                                       
+        </div>              
+                     
+    </div>
+    </div>
+    
+ 
+{% endblock %}
+
+
+{% block js_files %} 
+
+    <script src="{% static 'blog/js/script.js' %}"></script>
+
+{% endblock%}
+    

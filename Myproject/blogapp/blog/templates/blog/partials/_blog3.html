@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="card mb-3" style="max-width: 800px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{trip_city.image.url}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+
+          <h4 class="card-title "> <a href="{% url 'blogs_details' trip_city.slug %}">{{ trip_city.title }} </a> </h4>
+          <div style=" margin-right: 10px; margin-left: 3px; margin-bottom: 10px;"><p class="card-text">{{trip_city.description|safe|striptags|slice:"0:75"}}</p></div>        
+        
+        </div>
+      </div>
+    </div>
+</div>

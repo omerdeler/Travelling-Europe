@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %} Blogs {% endblock %}
+
+{% block content %}
+    
+<div class="container mt-3">
+    <div class="row">
+
+        <div class="col-3">
+            
+            {% include 'partials/_categories.html' %}
+
+        </div>
+
+        <div class="col-9">
+            <h1> <h3>Bütün Avrupa Ülkeleri</h3></h1>
+            <hr>
+            {% if blogs|length > 0 %}
+
+                {% for blog in blogs %}
+                       
+                    {% include 'blog/partials/_blog.html' %}
+
+                {% endfor %}
+            
+            {% else %}
+
+                <div class="alert-warning">No Blogs</div>
+
+            {% endif%}                                             
+                
+
+
+            
+                        
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

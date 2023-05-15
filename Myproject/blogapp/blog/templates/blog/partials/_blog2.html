@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="card mb-3" >
+    <div class="row g-0">
+      <div class="col-md-12">
+        
+        <h1 class="card-title"> <a href="{% url 'trip_by_city' blog_city.slug %}"> <div style="padding: 10px;"><h3>{{ blog_city.title }}</a> </h3> </div></h1>
+        
+        <img src="{{blog_city.image.url}}" class="img-fluid rounded-start" alt="..." width="300px" style="float:left; margin-right: 10px; margin-left: 10px; margin-bottom: 10px; ">
+        
+        <div style="text-align:justify; margin-right: 10px; margin-left: 10px; margin-bottom: 10px;"><p class="card-text">{{blog_city.description|safe|striptags|slice:"0:1500"}}</p></div>
+        
+      </div>
+    </div>
+</div>
+
